@@ -1,0 +1,39 @@
+.card-item {
+  display: block;
+  padding: 30px 20px;
+  background-color: #121212;
+  overflow: hidden;
+  position: relative;
+  margin: 0 15px 30px;
+  overflow: hidden;
+  border-radius: 28px;
+  height: 130px;
+}
+
+.card-item .image {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  height: 30px;
+  width: 30px;
+}
+
+.card-item .title {
+  display: block;
+  text-align: left;
+  color: var(--white-color);
+  line-height: 1;
+  font-size: var(--big-font-size);
+  font-weight: var(--bold-font-weight);
+}
+
+.card-item .dificulty {
+  display: block;
+  text-align: left;
+  color: var(--yellow-star-color);
+  font-size: var(--normal-font-size);
+  font-weight: var(--medium-font-weight);
+  text-transform: uppercase;
+  margin-top: 1rem;
+}
+
