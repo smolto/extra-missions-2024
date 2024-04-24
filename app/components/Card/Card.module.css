@@ -1,21 +1,40 @@
 .card-item {
   display: block;
   padding: 30px 20px;
-  background-color: #121212;
   overflow: hidden;
   position: relative;
-  margin: 0 15px 30px;
+  margin: 0 15px 0;
   overflow: hidden;
   border-radius: 28px;
   height: 130px;
 }
 
+.mario {
+  background-color: #ff6a50;
+}
+
+.luigi {
+  background-color: #0bb14b;
+}
+
+.toad {
+  background-color: #ff9c5b;
+}
+
+.peach {
+  background-color: #f8b5dc;
+}
+
+.bowser {
+  background-color: #d9451f;
+}
+
 .card-item .image {
   position: absolute;
-  top: 15px;
-  right: 15px;
-  height: 30px;
-  width: 30px;
+  bottom: 20px;
+  right: 30px;
+  width: 70px;
+  animation: shake 1s ease-in infinite;
 }
 
 .card-item .title {
@@ -27,13 +46,27 @@
   font-weight: var(--bold-font-weight);
 }
 
-.card-item .dificulty {
+.card-item .subtitle {
   display: block;
   text-align: left;
-  color: var(--yellow-star-color);
-  font-size: var(--normal-font-size);
+  color: var(--dark-gray-color);
+  font-size: var(--medium-font-size);
   font-weight: var(--medium-font-weight);
-  text-transform: uppercase;
-  margin-top: 1rem;
+  margin-top: .5rem;
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(0deg);
+  }
+  30% {
+    transform: rotate(25deg);
+  }
+  60% {
+    transform: rotate(-25deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
 

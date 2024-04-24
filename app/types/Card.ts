@@ -1,7 +1,6 @@
-type Dificulty = "easy" | "medium" | "hard";
-
 export type Card = {
   title: string;
+  subtitle: string;
   image: string;
-  dificulty: Dificulty;
+  type: 'mario' | 'luigi' | 'peach' | 'toad' | 'bowser';
 }
