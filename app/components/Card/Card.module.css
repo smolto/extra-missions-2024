@@ -17,6 +17,10 @@
   background-color: #0bb14b;
 }
 
+.luigi img {
+  width: 80px !important;
+}
+
 .toad {
   background-color: #ff9c5b;
 }
