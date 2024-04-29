@@ -39,3 +39,7 @@ body {
   height: 100vh;
   background-color: var(--blue-color);
 }
+
+a {
+  text-decoration: none;
+}
