@@ -54,7 +54,7 @@
   display: block;
   text-align: left;
   color: var(--dark-gray-color);
-  font-size: var(--medium-font-size);
+  font-size: var(--mid-font-size);
   font-weight: var(--medium-font-weight);
   margin-top: .5rem;
 }

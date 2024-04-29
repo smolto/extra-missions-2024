@@ -18,6 +18,7 @@
   line-height: 1;
   font-size: var(--large-font-size);
   font-weight: var(--extra-bold-font-weight);
+  font-family: 'Super Mario 256', sans-serif;
 }
 
 .welcome-content p {

@@ -7,13 +7,34 @@ export default function Page() {
   return (
     <div>
       <main className={styles["welcome-content"]}>
-        <span className={styles["subtitle"]}>Welcome to Session 1</span>
+        <span className={styles["subtitle"]}>Session 1</span>
         <img src="/assets/characters/mario.png" alt="Mario characters" />
       </main>
-      <div style={{marginTop: '1rem'}}>
+      <div style={{marginTop: '30px', display: 'grid', gridAutoFlow: 'row', gap: '30px'}}>
         <TaskCard
-          title="Task 1"
-          subtitle="Bowser's challenge"
+          title="Bowser's challenge"
+          subtitle="Task 1"
+          image="/assets/tasks/bowsers.png"
+          type="mario"
+          slug="task-1"
+        />
+        <TaskCard
+          title="Bowser's challenge"
+          subtitle="Task 1"
+          image="/assets/tasks/bowsers.png"
+          type="mario"
+          slug="task-1"
+        />
+        <TaskCard
+          title="Bowser's challenge"
+          subtitle="Task 1"
+          image="/assets/tasks/bowsers.png"
+          type="mario"
+          slug="task-1"
+        />
+        <TaskCard
+          title="Bowser's challenge"
+          subtitle="Task 1"
           image="/assets/tasks/bowsers.png"
           type="mario"
           slug="task-1"

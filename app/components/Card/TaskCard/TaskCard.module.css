@@ -24,9 +24,9 @@
   text-align: left;
   color: var(--white-color);
   line-height: 1;
-  font-size: var(--big-font-size);
+  font-size: var(--mid-font-size);
   font-weight: var(--bold-font-weight);
-  background: linear-gradient(to left, transparent, var(--primary-color));
+  background: linear-gradient(90deg, var(--primary-color) 90%, transparent 100%);
   padding-left: 0.4rem;
 }
 
@@ -34,11 +34,12 @@
   display: block;
   text-align: left;
   color: var(--yellow-star-color);
-  font-size: var(--medium-font-size);
+  font-size: var(--normal-font-size);
   font-weight: var(--medium-font-weight);
   margin-top: .5rem;
-  background: linear-gradient(90deg, var(--blue-color) 78%, transparent 100%);
+  background: linear-gradient(90deg, transparent 0, var(--blue-color) 10%,  var(--blue-color) 90%, transparent 100%);
   padding-left: 0.4rem;
+  text-align: center;
 }
 
 @keyframes shake {
