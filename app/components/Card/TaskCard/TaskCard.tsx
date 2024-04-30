@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export const TaskCard = ({ title, subtitle, image, type, slug }: CardType) => {
   return (
-    <Link href={`/session/${slug}/tasks`}>
+    <Link href={`/session/${slug}/task/1`}>
       <article className={`${styles["card-item"]} ${styles[type]}`}>
         <img className={styles["image"]} src={image} alt={title} />
         <div>

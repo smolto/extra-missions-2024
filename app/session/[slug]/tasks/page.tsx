@@ -18,27 +18,6 @@ export default function Page() {
           type="mario"
           slug="task-1"
         />
-        <TaskCard
-          title="Bowser's challenge"
-          subtitle="Task 1"
-          image="/assets/tasks/bowsers.png"
-          type="mario"
-          slug="task-1"
-        />
-        <TaskCard
-          title="Bowser's challenge"
-          subtitle="Task 1"
-          image="/assets/tasks/bowsers.png"
-          type="mario"
-          slug="task-1"
-        />
-        <TaskCard
-          title="Bowser's challenge"
-          subtitle="Task 1"
-          image="/assets/tasks/bowsers.png"
-          type="mario"
-          slug="task-1"
-        />
       </div>
       <FloatButton />
     </div>
