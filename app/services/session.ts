@@ -1,4 +1,3 @@
-import { error } from "console";
 import { Session, SessionResponse } from "../types";
 
 export async function getSessions() {
@@ -22,7 +21,7 @@ export async function getSessions() {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
-          authorization: `Bearer ${process.env.NEXT_PUBLIC_WEB_TOKEN}`,
+          authorization: `Bearer ${process.env.WEB_TOKEN}`,
         },
         next: {
           revalidate: 0,

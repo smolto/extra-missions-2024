@@ -17,6 +17,7 @@ function SessionList({data, error} : {data: {sessions: Session[]}; error: unknow
       {
         data.sessions.map((session) => (
           <Card
+            key={session.id}
             title={session.name}
             subtitle={session.question}
             image={session.characterImage}
