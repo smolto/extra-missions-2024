@@ -1,6 +1,6 @@
 .welcome-content {
   padding: 1rem 2rem;
-  background-image: url(/assets/background/bg-pattern.png),linear-gradient(180deg,#e70112 16%,#b20722 76%);
+  background-image: linear-gradient(180deg,#e70112 16%,#b20722 76%);
   display: flex;
   flex-direction: column;
   justify-content: center;
