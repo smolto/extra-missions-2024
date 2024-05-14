@@ -16,8 +16,6 @@ export default async function Page({params}: Params) {
 
   const {data, error} = response;
 
-  console.log({data});
-
   return (
     <div>
       <main className={styles["welcome-content"]}>
