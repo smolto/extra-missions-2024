@@ -1,13 +1,28 @@
 import { TaskCard } from "@/app/components";
 import { FloatButton } from "@/app/components/Button/FloatButton/FloatButton";
 import styles from "@/app/styles/post.module.css";
+import { getPost } from "../../../../../services/post";
+import { formatDate } from "../../../../../utils/date";
 
-export default function Page() {
+type Params = {
+  params: {
+    slug: string;
+    id: string;
+  }
+}
+
+export default async function Page({params}: Params) {
+  const response = await getPost(params.id);
+
+  const {data, error} = response;
+
+  console.log({data});
+
   return (
     <div>
       <main className={styles["welcome-content"]}>
-        <span className={styles["subtitle"]}>Bowser&apos;s challenge</span>
-        <img src="/assets/tasks/bowsers.png" alt="Mario characters" />
+        <span className={styles["subtitle"]}>{data.post.name}</span>
+        <img src={data.post.headingImage} alt="Mario characters" />
       </main>
       <article style={{padding: "1rem"}}>
         <div
@@ -21,25 +36,22 @@ export default function Page() {
             padding: "1rem",
           }}
         >
-          <p style={{color: '#7B000A'}}><span style={{fontWeight: 600 }}>Date:</span> 13/9/2021</p>
-          <p className={styles["title"]}>Are you ready for an extra mission?</p>
+          <p style={{color: '#7B000A'}}><span style={{fontWeight: 600 }}>Date:</span> {formatDate(data.post.date!!)}</p>
+          <p className={styles["title"]}>{data.post.title}</p>
           <p>
-            On this occasion it consists of revising the vocabulary we saw in
-            class by using Quizlet. You have different options you can use to
-            study the new words.
+            {data.post.firstParagraph}
           </p>
           <p>
-            Don’t forget that if you successfully complete this extra mission,
-            you will receive 20 coins.
+          {data.post.secondParagraph}
           </p>
-          <p>Good luck!</p>
+          <p>{data.post.thirdParagraph}</p>
           <a href="https://quizlet.com/_bqdd9g?x=1jqt&amp;amp;i=44z3fl">
             <b>Quizlet Link</b>
           </a>
           <div className={styles["center"]}>
             <img
               className={styles["first-image"]}
-              src="/assets/items/mario-luigi-peach.png"
+              src={data.post.footerImage}
               alt=""
             />
           </div>
