@@ -3,6 +3,9 @@ import { FloatButton } from "@/app/components/Button/FloatButton/FloatButton";
 import styles from "@/app/styles/post.module.css";
 import { getPost } from "../../../../../services/post";
 import { formatDate } from "../../../../../utils/date";
+import { showItalicWordsOnText } from "../../../../../utils/italic";
+
+// TODO: Justify paragraphs
 
 type Params = {
   params: {
@@ -37,7 +40,7 @@ export default async function Page({params}: Params) {
           <p style={{color: '#7B000A'}}><span style={{fontWeight: 600 }}>Date:</span> {formatDate(data.post.date!!)}</p>
           <p className={styles["title"]}>{data.post.title}</p>
           <p>
-            {data.post.firstParagraph}
+            <div className="Container" dangerouslySetInnerHTML={{__html: showItalicWordsOnText(data.post.firstParagraph!!)}}></div>
           </p>
           <p>
           {data.post.secondParagraph}
