@@ -6,4 +6,5 @@ export type Card = {
   image: string;
   type: CardType;
   slug: string;
+  id?: string;
 }

@@ -9,9 +9,16 @@ export type Session = {
   type: CardType;
 }
 
-export type SessionResponse = {
+export type SessionsResponse = {
   data: {
     sessions: Session[]
   };
-  error: unknown | undefined
+  error: unknown | undefined;
+}
+
+export type SessionResponse = {
+  data: {
+    session: Session;
+  };
+  error: unknown | undefined;
 }
