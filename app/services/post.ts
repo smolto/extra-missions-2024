@@ -14,6 +14,8 @@ export async function getPost(id: string) {
         headingImage
         date
         name
+        linkText
+        linkUrl
       }
     }
   `;

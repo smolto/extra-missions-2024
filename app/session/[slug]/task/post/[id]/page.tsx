@@ -19,6 +19,8 @@ export default async function Page({params}: Params) {
 
   const {data, error} = response;
 
+  console.log({data});
+
   return (
     <div>
       <main className={styles["welcome-content"]}>
@@ -39,15 +41,17 @@ export default async function Page({params}: Params) {
         >
           <p style={{color: '#7B000A'}}><span style={{fontWeight: 600 }}>Date:</span> {formatDate(data.post.date!!)}</p>
           <p className={styles["title"]}>{data.post.title}</p>
-          <p>
-            <div className="Container" dangerouslySetInnerHTML={{__html: showItalicWordsOnText(data.post.firstParagraph!!)}}></div>
-          </p>
+          <p dangerouslySetInnerHTML={{__html: showItalicWordsOnText(data.post.firstParagraph!!)}} />
           <p>
           {data.post.secondParagraph}
           </p>
           <p>{data.post.thirdParagraph}</p>
-          <a href="https://quizlet.com/_bqdd9g?x=1jqt&amp;amp;i=44z3fl">
-            <b>Quizlet Link</b>
+          <a
+            className={data.post.linkUrl ? "" : styles['no-url-link']}
+            href={data.post.linkUrl ?? ""}
+            target={data.post.linkUrl ? "_blank" : '_self'}
+          >
+            <b>{data.post.linkText}</b>
           </a>
           <div className={styles["center"]}>
             <img
@@ -58,7 +62,6 @@ export default async function Page({params}: Params) {
           </div>
         </div>
       </article>
-
       <FloatButton />
     </div>
   );

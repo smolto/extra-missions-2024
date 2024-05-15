@@ -9,6 +9,8 @@ export type Post = {
   headingImage?: string;
   date?: string;
   name?: string;
+  linkText?: string;
+  linkUrl?: string;
 }
 
 export type PostResponse = {
