@@ -1,9 +1,12 @@
+.card-link {
+  margin: 0 15px 0;
+}
+
 .card-item {
   display: block;
   padding: 30px 20px;
   overflow: hidden;
   position: relative;
-  margin: 0 15px 0;
   overflow: hidden;
   border-radius: 28px;
   height: 130px;

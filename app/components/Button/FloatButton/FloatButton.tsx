@@ -1,11 +1,16 @@
 import Link from "next/link";
 import styles from "./FloatButton.module.css";
 
-export function FloatButton() {
+type FloatButtonProps = {
+  link?: string;
+  img?: string;
+}
+
+export function FloatButton({link = '/', img = '/assets/items/mushroom-house.png'}: FloatButtonProps) {
   return (
-    <Link href="/">
+    <Link href={link}>
       <button className={styles["float-button"]}>
-        <img src="/assets/items/mushroom-house.png" alt="" />
+        <img src={img} alt="" />
       </button>
     </Link>
   );

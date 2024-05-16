@@ -17,9 +17,7 @@ type Params = {
 export default async function Page({params}: Params) {
   const response = await getPost(params.id);
 
-  const {data, error} = response;
-
-  console.log({data});
+  const { data } = response;
 
   return (
     <div>
@@ -62,7 +60,10 @@ export default async function Page({params}: Params) {
           </div>
         </div>
       </article>
-      <FloatButton />
+      <FloatButton
+        link={`/session/${params.slug}/tasks`}
+        img="/assets/items/go-back.png"
+      />
     </div>
   );
 }

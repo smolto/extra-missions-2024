@@ -50,8 +50,8 @@ export default async function Page({params}: Params) {
   const response = await getSession(params.slug);
   const tasksResponse = await getTasks(params.slug);
 
-  const { data, error } = response;
-  const { data: {tasks}, error: tasksError } = tasksResponse;
+  const { data } = response;
+  const { data: { tasks }, error: tasksError } = tasksResponse;
 
   return (
     <div>
