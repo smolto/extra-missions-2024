@@ -11,16 +11,19 @@
   gap: 1rem;
   align-items: center;
   background-image: url(/assets/background/bowser-bg.png);
-  background-size: cover;
+  background-size: contain;
 }
 
 .card-item .image {
   width: 70px;
   animation: shake 1s ease-in infinite;
-  background-color: var(--white-color);
 
   border-radius: 100%;
   padding: 0.2rem;
+}
+
+.white-bg {
+  background-color: var(--white-color);
 }
 
 .card-item .title {
