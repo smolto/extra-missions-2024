@@ -1,9 +1,8 @@
-import { TaskCard } from "@/app/components";
-import { FloatButton } from "@/app/components/Button/FloatButton/FloatButton";
-import styles from "@/app/styles/post.module.css";
+import { TaskCard } from "@/components";
+import { FloatButton } from "@/components/Button/FloatButton/FloatButton";
+import styles from "@/styles/post.module.css";
 import { getPost } from "../../../../../services/post";
-import { formatDate } from "../../../../../utils/date";
-import { showItalicWordsOnText } from "../../../../../utils/italic";
+import { formatDate, showItalicWordsOnText } from "@/utils";
 
 // TODO: Justify paragraphs
 

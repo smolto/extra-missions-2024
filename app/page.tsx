@@ -1,10 +1,10 @@
-import en from "@/app/locales/en.json";
+import en from "@/locales/en.json";
 
-import styles from "@/app/styles/home.module.css";
-import { Card } from "@/app/components";
+import styles from "@/styles/home.module.css";
+import { Card } from "@/components";
 
 import { getSessions } from "./services/session";
-import { Session } from "./types";
+import { Session } from "../types";
 
 function SessionList({data, error} : {data: {sessions: Session[]}; error: unknown}) {
 

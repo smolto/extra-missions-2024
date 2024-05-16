@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import { Card as CardType } from "@/app/types";
+import { Card as CardType } from "@/types";
 import styles from "./TaskCard.module.css";
 import Link from "next/link";
 import { url } from "inspector";

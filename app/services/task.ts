@@ -1,4 +1,4 @@
-import { Task, TaskResponse, Tasks, TasksResponse } from "../types";
+import { Task, TaskResponse, Tasks, TasksResponse } from "@/types";
 
 export async function getTasks(sessionSlug: string) {
   const query = `

@@ -1,10 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
-import { TaskCard } from "@/app/components";
-import { FloatButton } from "@/app/components/Button/FloatButton/FloatButton";
-import styles from "@/app/styles/task.module.css";
+import { TaskCard } from "@/components";
+import { FloatButton } from "@/components/Button/FloatButton/FloatButton";
+import styles from "@/styles/task.module.css";
 import { getSession } from "../../../services/session";
 import { getTasks } from "../../../services/task";
-import { Tasks } from "../../../types";
+import { Tasks } from "../../../../types";
 
 type Params = {
   params: {

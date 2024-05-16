@@ -1,4 +1,4 @@
-import { Session, SessionResponse, SessionsResponse } from "../types";
+import { Session, SessionResponse, SessionsResponse } from "@/types";
 
 export async function getSessions() {
   const query = `

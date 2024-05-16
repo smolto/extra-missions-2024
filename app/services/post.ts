@@ -1,4 +1,4 @@
-import { PostResponse } from "../types/Post";
+import { PostResponse } from "@/types/Post";
 
 export async function getPost(id: string) {
   const query = `
