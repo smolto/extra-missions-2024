@@ -58,7 +58,6 @@ export default async function Page({params}: Params) {
   const { data: taskData } = taskReponse;
   const { data: subtaskData, error } = subtaskResponse;
 
-  console.log(subtaskData)
   return (
     <div>
       <main className={styles["welcome-content"]}>

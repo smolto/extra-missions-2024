@@ -86,8 +86,6 @@ export async function getTask(slug: string) {
 
     const { data }  = await res.json();
 
-    console.log(data)
-
     const response : TaskResponse = {
       data,
       error: undefined
