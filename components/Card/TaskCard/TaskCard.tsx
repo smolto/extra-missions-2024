@@ -12,9 +12,10 @@ export const TaskCard = ({
   slug,
   id,
   backgroundImage,
+  link = `/session/${slug}/task/post/${id}`
 }: CardType) => {
   return (
-    <Link href={`/session/${slug}/task/post/${id}`}>
+    <Link href={link}>
       <article className={`${styles["card-item"]} ${styles[type]}`} style={{backgroundImage: `url(${backgroundImage})`}}>
         <img className={styles["image"]} src={image} alt={title} />
         <div>

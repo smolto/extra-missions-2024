@@ -5,9 +5,9 @@ export type Task = {
   slug?: string;
   backgroundImage?: string;
   taskNumber?: number;
-  subtask?: {
+  subtasks?: {
     id?: string;
-  }
+  }[]
 }
 
 export type Tasks = Task[];

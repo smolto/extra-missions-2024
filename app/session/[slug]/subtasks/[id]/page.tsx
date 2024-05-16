@@ -1,14 +1,13 @@
-/* eslint-disable @next/next/no-img-element */
-import { TaskCard } from "@/components";
-import { FloatButton } from "@/components/Button/FloatButton/FloatButton";
-import styles from "@/styles/task.module.css";
-import { getSession } from "@/services/session";
-import { getTasks } from "@/services/task";
-import { Tasks } from "@/types";
+import styles from '@/styles/task.module.css';
+import { FloatButton } from '@/components/Button/FloatButton/FloatButton';
+import { getSubtasks, getTask } from '@/services/task';
+import { Tasks } from '../../../../../types';
+import { TaskCard } from '../../../../../components';
 
 type Params = {
   params: {
     slug: string;
+    id: string;
   }
 }
 
@@ -51,27 +50,32 @@ function TaskList({tasks, error, sessionSlug}: {tasks: Tasks; error: unknown; se
   )
 }
 
+
 export default async function Page({params}: Params) {
-  const response = await getSession(params.slug);
-  const tasksResponse = await getTasks(params.slug);
+  const taskReponse = await getTask(params.id);
+  const subtaskResponse = await getSubtasks(`${params.slug}-subtask`);
 
-  const { data } = response;
-  const { data: { tasks }, error: tasksError } = tasksResponse;
+  const { data: taskData } = taskReponse;
+  const { data: subtaskData, error } = subtaskResponse;
 
+  console.log(subtaskData)
   return (
     <div>
       <main className={styles["welcome-content"]}>
-        <span className={styles["subtitle"]}>{data.session?.name}</span>
-        <img src={data.session?.characterImage} alt="Mario characters" />
+        <span className={styles["subtitle"]}>{taskData.task.name}</span>
+        <img src={taskData.task.image} alt="Mario characters" />
       </main>
       <div style={{marginTop: '30px', display: 'grid', gridAutoFlow: 'row', gap: '30px'}}>
         <TaskList
-          error={tasksError}
-          tasks={tasks}
-          sessionSlug={data.session?.slug!!}
+          error={error}
+          tasks={subtaskData.tasks}
+          sessionSlug={params.slug}
         />
       </div>
-      <FloatButton />
+      <FloatButton
+        link={`/session/${params.slug}/tasks`}
+        img='/assets/items/go-back.png'
+      />
     </div>
   );
 }

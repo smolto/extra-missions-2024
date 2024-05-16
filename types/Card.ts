@@ -8,4 +8,5 @@ export type Card = {
   slug: string;
   id?: string;
   backgroundImage?: string;
+  link?: string;
 }
