@@ -2,6 +2,7 @@
 import { Card as CardType } from "@/app/types";
 import styles from "./TaskCard.module.css";
 import Link from "next/link";
+import { url } from "inspector";
 
 export const TaskCard = ({ 
   title,
@@ -9,11 +10,12 @@ export const TaskCard = ({
   image,
   type,
   slug,
-  id 
+  id,
+  backgroundImage,
 }: CardType) => {
   return (
     <Link href={`/session/${slug}/task/post/${id}`}>
-      <article className={`${styles["card-item"]} ${styles[type]}`}>
+      <article className={`${styles["card-item"]} ${styles[type]}`} style={{backgroundImage: `url(${backgroundImage})`}}>
         <img className={styles["image"]} src={image} alt={title} />
         <div>
           <h2 className={styles["title"]}>{title}</h2>

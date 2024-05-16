@@ -7,4 +7,5 @@ export type Card = {
   type: CardType;
   slug: string;
   id?: string;
+  backgroundImage?: string;
 }

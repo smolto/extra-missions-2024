@@ -36,6 +36,7 @@ function TaskList({tasks, error, sessionSlug}: {tasks: Tasks; error: unknown; se
                 type="mario"
                 slug={sessionSlug}
                 id={task.id!!}
+                backgroundImage={task.backgroundImage!!}
               />
             )
           }
@@ -56,7 +57,7 @@ export default async function Page({params}: Params) {
     <div>
       <main className={styles["welcome-content"]}>
         <span className={styles["subtitle"]}>{data.session?.name}</span>
-        <img src="/assets/characters/mario.png" alt="Mario characters" />
+        <img src={data.session?.characterImage} alt="Mario characters" />
       </main>
       <div style={{marginTop: '30px', display: 'grid', gridAutoFlow: 'row', gap: '30px'}}>
         <TaskList
