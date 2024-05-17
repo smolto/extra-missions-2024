@@ -36,11 +36,7 @@ function TaskList({tasks, error, sessionSlug}: {tasks: Tasks; error: unknown; se
                 slug={sessionSlug}
                 id={task.id!!}
                 backgroundImage={task.backgroundImage!!}
-                link={task.subtasks && task.subtasks?.length < 1 
-                  ? 
-                    `/session/${sessionSlug}/task/post/${task.id}` 
-                  : 
-                    `/session/${sessionSlug}/subtasks/${task.slug}` }
+                link={`/session/${sessionSlug}/task/post/${task.id}`}
               />
             )
           }

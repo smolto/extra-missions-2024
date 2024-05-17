@@ -43,13 +43,31 @@ export default async function Page({params}: Params) {
           {data.post.secondParagraph}
           </p>
           <p>{data.post.thirdParagraph}</p>
-          <a
-            className={data.post.linkUrl ? "" : styles['no-url-link']}
-            href={data.post.linkUrl ?? ""}
-            target={data.post.linkUrl ? "_blank" : '_self'}
-          >
-            <b>{data.post.linkText}</b>
-          </a>
+          {
+            data.post.linkText?.split(';').length === 1 ? (
+              <a
+                className={data.post.linkUrl ? "" : styles['no-url-link']}
+                href={data.post.linkUrl ?? ""}
+                target={data.post.linkUrl ? "_blank" : '_self'}
+              >
+                <b>{data.post.linkText}</b>
+              </a>
+            ) : (
+              data.post.linkText?.split(';').map((text, index) => {
+                const url = data.post.linkUrl?.split(';')[index]
+                
+                return (
+                  <a
+                    className={url ? "" : styles['no-url-link']}
+                    href={url ?? ""}
+                    target={url ? "_blank" : '_self'}
+                  >
+                    <b>{text}</b>
+                  </a>
+                )
+              })
+            )
+          }
           <div className={styles["center"]}>
             <img
               className={styles["first-image"]}
