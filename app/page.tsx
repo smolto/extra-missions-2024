@@ -9,7 +9,7 @@ export default function Home() {
 
   useEffect(() => {
     setTimeout(() => {
-      //router.replace('/sessions');
+      router.replace('/sessions');
     }, 2000);
   }, [])
 
