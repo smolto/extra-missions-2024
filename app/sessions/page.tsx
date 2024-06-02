@@ -5,6 +5,7 @@ import { Card } from "@/components";
 
 import { getSessions } from "@/services/session";
 import { Session } from "@/types";
+import { FloatButton } from "../../components/Button/FloatButton/FloatButton";
 
 function SessionList({data, error} : {data: {sessions: Session[]}; error: unknown}) {
 

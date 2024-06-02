@@ -1,15 +1,19 @@
 .container {
-  position: relative;
-  width: 100%;
+  display: flex;
+  flex-direction: column;
   height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.stars-container {
+  height: 150px;
+  width: 100%;
+  position: relative;
 }
 
 .intro-container {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  justify-content: center;
-  align-items: center;
   padding: 1rem;
 }
 
@@ -21,13 +25,14 @@
 
 .intro-container h2 {
   color: var(--white-color);
+  text-align: center;
 }
 
 .stars-1 {
   position: absolute;
   height: 30px;
   width: 30px;
-  top: 10px;
+  top: 0px;
   right: 10px;
 }
 
@@ -36,7 +41,7 @@
   position: absolute;
   height: 40px;
   width: 40px;
-  top: 60px;
+  top: 30px;
   right: 55px;
 }
 
@@ -44,78 +49,78 @@
   position: absolute;
   height: 50px;
   width: 50px;
-  top: 90px;
-  right: 140px;
+  top: 55px;
+  right: 120px;
 }
 
 .stars-4 {
   position: absolute;
   height: 35px;
   width: 35px;
-  top: 40px;
-  right: 210px;
+  top: 10px;
+  right: 190px;
 }
 
 .stars-5 {
   position: absolute;
   height: 50px;
   width: 50px;
-  top: 70px;
-  right: 260px;
+  top: 50px;
+  right: 240px;
 }
 
 .stars-6 {
   position: absolute;
   height: 50px;
   width: 50px;
-  top: 130px;
-  right: 310px;
+  bottom: 0;
+  left: 20px;
 }
 
 .stars-7 {
   position: absolute;
   height: 50px;
   width: 50px;
-  top: 480px;
-  right: 310px;
+  top: 0;
+  right: 10px;
 }
 
 .stars-8 {
   position: absolute;
   height: 45px;
   width: 45px;
-  top: 520px;
-  right: 250px;
+  top: 20px;
+  right: 100px;
 }
 
 .stars-9 {
   position: absolute;
   height: 40px;
   width: 40px;
-  top: 560px;
-  right: 200px;
+  top: 70px;
+  right: 160px;
 }
 
 .stars-10 {
   position: absolute;
   height: 45px;
   width: 45px;
-  top: 490px;
-  right: 140px;
+  top: 100px;
+  right: 210px;
 }
 
 .stars-11 {
   position: absolute;
   height: 60px;
   width: 60px;
-  top: 560px;
-  right: 90px;
+  top: 20px;
+  right: 270px;
 }
 
 .stars-12 {
   position: absolute;
   height: 60px;
   width: 60px;
-  top: 490px;
-  right: 40px;
+  bottom: 0;
+  left: 10px;
 }
