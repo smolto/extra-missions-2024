@@ -1,48 +1,36 @@
-import en from "@/locales/en.json";
+'use client';
 
-import styles from "@/styles/home.module.css";
-import { Card } from "@/components";
+import { useEffect } from "react";
+import { useRouter } from 'next/navigation';
+import styles from '@/styles/intro.module.css';
 
-import { getSessions } from "@/services/session";
-import { Session } from "@/types";
+export default function Home() {
+  const router = useRouter()
 
-function SessionList({data, error} : {data: {sessions: Session[]}; error: unknown}) {
-
-  if(error && !data?.sessions) {
-    return <h1>There was an error fetching data</h1>
-  }
+  useEffect(() => {
+    setTimeout(() => {
+      router.replace('/sessions');
+    }, 2000);
+  }, [])
 
   return (
-    <div className={styles["grid"]}>
-      {
-        data.sessions.map((session) => (
-          <Card
-            key={session.id}
-            title={session.name}
-            subtitle={session.question}
-            image={session.characterImage}
-            type={session.type}
-            slug={session.slug}
-          />
-        ))
-      }
+    <section className={styles['container']}>
+      <div className={styles['intro-container']}>
+        <h2>Traveling to the World 5</h2>
+        <img className={styles['intro-image']} src="/assets/intro/giphy.gif" alt="" />
       </div>
-  )
-}
-
-export default async function Home() {
-  const response = await getSessions();
-
-  const {error, data} = response;
-
-  return (
-    <div>
-      <main className={styles["welcome-content"]}>
-        <span className={styles["subtitle"]}>{en.home.subtitle}</span>
-        <span className={styles["title"]}>{en.home.title}</span>
-        <img src="/assets/background/banner-image.png" alt="Mario characters" />
-      </main>
-      <SessionList error={error} data={data} />
-    </div>
+      <img className={styles['stars-1']} src="/assets/items/mario-star.png" alt="" />
+      <img className={styles['stars-2']} src="/assets/items/mario-star.png" alt="" />
+      <img className={styles['stars-3']} src="/assets/items/mario-star.png" alt="" />
+      <img className={styles['stars-4']} src="/assets/items/mario-star.png" alt="" />
+      <img className={styles['stars-5']} src="/assets/items/mario-star.png" alt="" />
+      <img className={styles['stars-6']} src="/assets/items/mario-star.png" alt="" />
+      <img className={styles['stars-7']} src="/assets/items/mario-star.png" alt="" />
+      <img className={styles['stars-8']} src="/assets/items/mario-star.png" alt="" />
+      <img className={styles['stars-9']} src="/assets/items/mario-star.png" alt="" />
+      <img className={styles['stars-10']} src="/assets/items/mario-star.png" alt="" />
+      <img className={styles['stars-11']} src="/assets/items/mario-star.png" alt="" />
+      <img className={styles['stars-12']} src="/assets/items/mario-star.png" alt="" />
+    </section>
   );
 }
