@@ -81,11 +81,6 @@
   color: var(--black-color);
 }
 
-.container {
-  max-width: 900px;
-  margin: 0 auto;
-}
-
 .float-button-container {
   padding: 0 1rem;
   position: sticky;
@@ -96,8 +91,16 @@
   margin-top: 1rem;
 }
 
+.container {
+  padding-bottom: 6rem;
+}
+
 @media (min-width: 768px) {
-  
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding-bottom: 6rem;
+  }
 }
 
 @keyframes shake {

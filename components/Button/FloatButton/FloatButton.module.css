@@ -1,5 +1,7 @@
 .float-button {
-  bottom: 10px;
+  position: fixed;
+  bottom: 100px;
+  right: 20px;
   background-color: var(--yellow-star-color);
   color: #ffffff;
   width: 70px;

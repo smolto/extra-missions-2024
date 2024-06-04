@@ -12,10 +12,9 @@ export default function Home() {
     setTimeout(() => {
       enableScrolling();
       router.push('/sessions');
-    }, 27000);
+    }, 3000);
   }, [])
 
-  //TODO: Fix desktop
   return (
     <section className={styles['container']} style={{height: '100vh', background: '#000'}}>
       <div>
