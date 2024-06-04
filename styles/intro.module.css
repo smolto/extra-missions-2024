@@ -23,7 +23,7 @@
 
 .intro-image {
   width: 100%;
-  height: 210px;
+  height: 310px;
   margin-top: 1rem;
 }
 
@@ -36,8 +36,8 @@
   position: absolute;
   height: 30px;
   width: 30px;
-  top: 0px;
-  right: 10px;
+  top: 55px;
+  right: 50px;
 }
 
 
@@ -45,40 +45,24 @@
   position: absolute;
   height: 40px;
   width: 40px;
-  top: 30px;
-  right: 55px;
+  top: 70px;
+  right: 90px;
 }
 
 .stars-3 {
   position: absolute;
   height: 50px;
   width: 50px;
-  top: 55px;
-  right: 120px;
+  top: 65px;
+  right: 200px;
 }
 
 .stars-4 {
   position: absolute;
   height: 35px;
   width: 35px;
-  top: 10px;
-  right: 190px;
-}
-
-.stars-5 {
-  position: absolute;
-  height: 50px;
-  width: 50px;
-  top: 50px;
-  right: 240px;
-}
-
-.stars-6 {
-  position: absolute;
-  height: 50px;
-  width: 50px;
-  bottom: 0;
-  left: 20px;
+  top: 90px;
+  right: 310px;
 }
 
 .stars-7 {
@@ -86,7 +70,7 @@
   height: 50px;
   width: 50px;
   top: 0;
-  right: 10px;
+  right: 30px;
 }
 
 .stars-8 {
@@ -94,23 +78,23 @@
   height: 45px;
   width: 45px;
   top: 20px;
-  right: 100px;
+  right: 130px;
 }
 
 .stars-9 {
   position: absolute;
   height: 40px;
   width: 40px;
-  top: 70px;
-  right: 160px;
+  top: 40px;
+  right: 210px;
 }
 
 .stars-10 {
   position: absolute;
   height: 45px;
   width: 45px;
-  top: 100px;
-  right: 210px;
+  top: 10px;
+  right: 300px;
 }
 
 .stars-11 {
@@ -127,4 +111,92 @@
   width: 60px;
   bottom: 0;
   left: 10px;
+}
+
+@media (min-width: 768px) {
+  .intro-image {
+    height: 100%;
+    margin-top: 1rem;
+  }
+
+  .stars-1 {
+    position: absolute;
+    height: 70px;
+    width: 70px;
+    top: 55px;
+    right: 50px;
+  }
+  
+  
+  .stars-2 {
+    position: absolute;
+    height: 90px;
+    width: 90px;
+    top: 70px;
+    right: 150px;
+  }
+  
+  .stars-3 {
+    position: absolute;
+    height: 110px;
+    width: 110px;
+    top: 30px;
+    right: 280px;
+  }
+  
+  .stars-4 {
+    position: absolute;
+    height: 90px;
+    width: 90px;
+    top: 60px;
+    right: 450px;
+  }
+  
+  .stars-7 {
+    position: absolute;
+    height: 90px;
+    width: 90px;
+    top: 0;
+    right: 40px;
+  }
+  
+  .stars-8 {
+    position: absolute;
+    height: 70px;
+    width: 70px;
+    top: 50px;
+    right: 170px;
+  }
+  
+  .stars-9 {
+    position: absolute;
+    height: 90px;
+    width: 90px;
+    top: 40px;
+    right: 310px;
+  }
+  
+  .stars-10 {
+    position: absolute;
+    height: 90px;
+    width: 90px;
+    top: 20px;
+    right: 470px;
+  }
+  
+  .stars-11 {
+    position: absolute;
+    height: 60px;
+    width: 60px;
+    top: 20px;
+    right: 270px;
+  }
+  
+  .stars-12 {
+    position: absolute;
+    height: 60px;
+    width: 60px;
+    bottom: 0;
+    left: 10px;
+  }
 }
