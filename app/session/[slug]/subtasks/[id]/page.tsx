@@ -55,12 +55,12 @@ export default async function Page({params}: Params) {
   const { data: subtaskData, error } = subtaskResponse;
 
   return (
-    <div>
+    <div className={styles['container']}>
       <main className={styles["welcome-content"]}>
         <span className={styles["subtitle"]}>{taskData.task.name}</span>
         <img src={taskData.task.image} alt="Mario characters" />
       </main>
-      <div style={{marginTop: '30px', display: 'grid', gridAutoFlow: 'row', gap: '30px'}}>
+      <div className={styles['task-list']}>
         <TaskList
           error={error}
           tasks={subtaskData.tasks}

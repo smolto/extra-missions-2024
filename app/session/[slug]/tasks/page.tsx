@@ -59,12 +59,12 @@ export default async function Page({params}: Params) {
   const { data: { tasks }, error: tasksError } = tasksResponse;
 
   return (
-    <div>
+    <div className={styles['container']}>
       <main className={styles["welcome-content"]}>
         <span className={styles["subtitle"]}>{data.session?.name}</span>
         <img src={data.session?.characterImage} alt="Mario characters" />
       </main>
-      <div style={{marginTop: '30px', display: 'grid', gridAutoFlow: 'row', gap: '30px'}}>
+      <div className={styles['task-list']}>
         <TaskList
           error={tasksError}
           tasks={tasks}

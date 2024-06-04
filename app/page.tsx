@@ -25,7 +25,7 @@ export default function Home() {
           <img className={styles['stars-6']} src="/assets/items/mario-star.png" alt="" />
         </div>
         <div className={styles['intro-container']}>
-          <h2>Traveling to the World 5</h2>
+          <h2>Travelling to World 5</h2>
           <img className={styles['intro-image']} src="/assets/intro/giphy.gif" alt="" />
         </div>
         <div className={styles['stars-container']}>

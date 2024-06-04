@@ -6,7 +6,7 @@ type FloatButtonProps = {
   img?: string;
 }
 
-export function FloatButton({link = '/', img = '/assets/items/mushroom-house.png'}: FloatButtonProps) {
+export function FloatButton({link = '/sessions', img = '/assets/items/mushroom-house.png'}: FloatButtonProps) {
   return (
     <Link href={link}>
       <button className={styles["float-button"]}>

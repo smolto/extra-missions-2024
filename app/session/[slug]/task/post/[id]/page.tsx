@@ -19,7 +19,7 @@ export default async function Page({params}: Params) {
   const { data } = response;
 
   return (
-    <div>
+    <div className={styles['container']}>
       <main className={styles["welcome-content"]}>
         <span className={styles["subtitle"]}>{data.post.name}</span>
         <img src={data.post.headingImage} alt="Mario characters" />

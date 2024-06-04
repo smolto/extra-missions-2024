@@ -5,7 +5,6 @@ import { Card } from "@/components";
 
 import { getSessions } from "@/services/session";
 import { Session } from "@/types";
-import { FloatButton } from "../../components/Button/FloatButton/FloatButton";
 
 function SessionList({data, error} : {data: {sessions: Session[]}; error: unknown}) {
 
@@ -37,7 +36,7 @@ export default async function Home() {
   const {error, data} = response;
 
   return (
-    <div>
+    <div className={styles["container"]}>
       <main className={styles["welcome-content"]}>
         <span className={styles["subtitle"]}>{en.home.subtitle}</span>
         <span className={styles["title"]}>{en.home.title}</span>
