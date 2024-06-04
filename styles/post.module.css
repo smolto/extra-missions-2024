@@ -86,6 +86,16 @@
   margin: 0 auto;
 }
 
+.float-button-container {
+  padding: 0 1rem;
+  position: sticky;
+  display: block;
+  width: max-content;
+  margin-left: auto;
+  bottom: 10px;
+  margin-top: 1rem;
+}
+
 @media (min-width: 768px) {
   
 }

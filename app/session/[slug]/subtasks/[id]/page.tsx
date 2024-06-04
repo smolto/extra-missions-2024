@@ -67,10 +67,12 @@ export default async function Page({params}: Params) {
           sessionSlug={params.slug}
         />
       </div>
-      <FloatButton
-        link={`/session/${params.slug}/tasks`}
-        img='/assets/items/go-back.png'
-      />
+      <div className={styles['float-button-container']}>
+        <FloatButton
+          link={`/session/${params.slug}/tasks`}
+          img='/assets/items/go-back.png'
+        />
+      </div>
     </div>
   );
 }

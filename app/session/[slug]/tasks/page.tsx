@@ -71,7 +71,10 @@ export default async function Page({params}: Params) {
           sessionSlug={data.session?.slug!!}
         />
       </div>
-      <FloatButton />
+      <div className={styles['float-button-container']}>
+        <FloatButton />
+      </div>
+
     </div>
   );
 }
