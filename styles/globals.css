@@ -126,8 +126,6 @@ a {
 
 @media (min-width: 768px) {
   footer {
-    position: absolute;
-    bottom: 0;
     height: auto;
   }
 }
