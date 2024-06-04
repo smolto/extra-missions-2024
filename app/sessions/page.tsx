@@ -5,6 +5,7 @@ import { Card } from "@/components";
 
 import { getSessions } from "@/services/session";
 import { Session } from "@/types";
+import { Footer } from "../../components/Footer";
 
 function SessionList({data, error} : {data: {sessions: Session[]}; error: unknown}) {
 
@@ -36,18 +37,22 @@ export default async function Home() {
   const {error, data} = response;
 
   return (
-    <div className={styles["container"]}>
-      <main className={styles["welcome-content"]}>
-        <span className={styles["subtitle"]}>{en.home.subtitle}</span>
-        <span className={styles["title"]}>{en.home.title}</span>
-        <img src="/assets/background/banner-image.png" alt="Mario characters" />
-      </main>
-      <SessionList error={error} data={data} />
-      <hr />
-      <div className="feedback-box">
-        <h4>Did you like this unit?</h4>
-        <a href="https://padlet.com/irenebermudezz99/did-you-like-this-unit-epvpffzdmfb8l031 ">Let us know</a>
-      </div>
-    </div>
+    <>
+        <div className={styles["container"]}>
+          <main className={styles["welcome-content"]}>
+            <span className={styles["subtitle"]}>{en.home.subtitle}</span>
+            <span className={styles["title"]}>{en.home.title}</span>
+            <img src="/assets/background/banner-image.png" alt="Mario characters" />
+          </main>
+          <SessionList error={error} data={data} />
+          <hr />
+          <div className="feedback-box">
+            <h4>Did you like this unit?</h4>
+            <a href="https://padlet.com/irenebermudezz99/did-you-like-this-unit-epvpffzdmfb8l031 ">Let us know</a>
+          </div>
+        </div>
+        <Footer />
+    </>
+    
   );
 }

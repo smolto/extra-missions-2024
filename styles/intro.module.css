@@ -17,6 +17,10 @@
   padding: 1rem;
 }
 
+.intro-container h2 {
+  font-size: var(--large-font-size);
+}
+
 .intro-image {
   width: 100%;
   height: 210px;

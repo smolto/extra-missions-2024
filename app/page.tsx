@@ -6,15 +6,14 @@ import styles from '@/styles/intro.module.css';
 
 export default function Home() {
   const router = useRouter()
-
   useEffect(() => {
     setTimeout(() => {
-      router.replace('/sessions');
-    }, 2000);
+      router.push('/sessions');
+    }, 3000);
   }, [])
 
   return (
-    <section className={styles['container']}>
+    <section className={styles['container']} style={{height: '100vh', background: '#000'}}>
       <div>
         <div className={styles['stars-container']}>
           <img className={styles['stars-1']} src="/assets/items/mario-star.png" alt="" />
@@ -25,7 +24,7 @@ export default function Home() {
           <img className={styles['stars-6']} src="/assets/items/mario-star.png" alt="" />
         </div>
         <div className={styles['intro-container']}>
-          <h2>Travelling to World 5</h2>
+          <h2>Travelling to World 5...</h2>
           <img className={styles['intro-image']} src="/assets/intro/giphy.gif" alt="" />
         </div>
         <div className={styles['stars-container']}>

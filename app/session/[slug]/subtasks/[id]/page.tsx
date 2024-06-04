@@ -3,6 +3,7 @@ import { FloatButton } from '@/components/Button/FloatButton/FloatButton';
 import { getSubtasks, getTask } from '@/services/task';
 import { Tasks } from '../../../../../types';
 import { TaskCard } from '../../../../../components';
+import { Footer } from '../../../../../components/Footer';
 
 type Params = {
   params: {
@@ -55,24 +56,28 @@ export default async function Page({params}: Params) {
   const { data: subtaskData, error } = subtaskResponse;
 
   return (
-    <div className={styles['container']}>
-      <main className={styles["welcome-content"]}>
-        <span className={styles["subtitle"]}>{taskData.task.name}</span>
-        <img src={taskData.task.image} alt="Mario characters" />
-      </main>
-      <div className={styles['task-list']}>
-        <TaskList
-          error={error}
-          tasks={subtaskData.tasks}
-          sessionSlug={params.slug}
-        />
+    <>
+      <div className={styles['container']}>
+        <main className={styles["welcome-content"]}>
+          <span className={styles["subtitle"]}>{taskData.task.name}</span>
+          <img src={taskData.task.image} alt="Mario characters" />
+        </main>
+        <div className={styles['task-list']}>
+          <TaskList
+            error={error}
+            tasks={subtaskData.tasks}
+            sessionSlug={params.slug}
+          />
+        </div>
+        <div className={styles['float-button-container']}>
+          <FloatButton
+            link={`/session/${params.slug}/tasks`}
+            img='/assets/items/go-back.png'
+          />
+        </div>
       </div>
-      <div className={styles['float-button-container']}>
-        <FloatButton
-          link={`/session/${params.slug}/tasks`}
-          img='/assets/items/go-back.png'
-        />
-      </div>
-    </div>
+      <Footer />
+    </>
+    
   );
 }

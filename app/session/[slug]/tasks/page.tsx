@@ -5,6 +5,7 @@ import styles from "@/styles/task.module.css";
 import { getSession } from "@/services/session";
 import { getTasks } from "@/services/task";
 import { Tasks } from "@/types";
+import { Footer } from "../../../../components/Footer";
 
 type Params = {
   params: {
@@ -59,22 +60,24 @@ export default async function Page({params}: Params) {
   const { data: { tasks }, error: tasksError } = tasksResponse;
 
   return (
-    <div className={styles['container']}>
-      <main className={styles["welcome-content"]}>
-        <span className={styles["subtitle"]}>{data.session?.name}</span>
-        <img src={data.session?.characterImage} alt="Mario characters" />
-      </main>
-      <div className={styles['task-list']}>
-        <TaskList
-          error={tasksError}
-          tasks={tasks}
-          sessionSlug={data.session?.slug!!}
-        />
+    <>
+      <div className={styles['container']}>
+        <main className={styles["welcome-content"]}>
+          <span className={styles["subtitle"]}>{data.session?.name}</span>
+          <img src={data.session?.characterImage} alt="Mario characters" />
+        </main>
+        <div className={styles['task-list']}>
+          <TaskList
+            error={tasksError}
+            tasks={tasks}
+            sessionSlug={data.session?.slug!!}
+          />
+        </div>
+        <div className={styles['float-button-container']}>
+          <FloatButton />
+        </div>
       </div>
-      <div className={styles['float-button-container']}>
-        <FloatButton />
-      </div>
-
-    </div>
+      <Footer />
+    </>
   );
 }
