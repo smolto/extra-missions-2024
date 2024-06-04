@@ -41,6 +41,55 @@ body {
   overflow-x: hidden;
   height: 100vh;
   background: linear-gradient(180deg, var(--primary-color) 10%, var(--blue-color) 100%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  margin-top: 1rem;
+  background: #ad6a54;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-flow: column wrap;
+  -webkit-box-align: center;
+  align-items: center;
+  padding: 0.5rem;
+  color: rgb(255, 255, 255);
+  width: 100%;
+  height: 100%;
+}
+
+footer .irene-paragraph {
+  font-family: Arial;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    padding: 0.5rem;
+    color: rgb(255, 255, 255);
+    width: 100%;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: baseline;
+    align-items: baseline;
+    gap: 6px;
+}
+
+footer .santi-paragraph {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: baseline;
+  align-items: baseline;
+  cursor: pointer;
+}
+
+footer p {
+  font-size: 11px;
+  font-family: Arial;
 }
 
 a {
