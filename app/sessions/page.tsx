@@ -6,6 +6,7 @@ import { Card } from "@/components";
 import { getSessions } from "@/services/session";
 import { Session } from "@/types";
 import { Footer } from "../../components/Footer";
+import { Feedback } from "../../components/Feeback";
 
 function SessionList({data, error} : {data: {sessions: Session[]}; error: unknown}) {
 
@@ -42,10 +43,12 @@ export default async function Home() {
           <main className={styles["welcome-content"]}>
             <span className={styles["subtitle"]}>{en.home.subtitle}</span>
             <span className={styles["title"]}>{en.home.title}</span>
+            <Feedback isDesktop={true}/>
             <img src="/assets/background/banner-image.png" alt="Mario characters" />
           </main>
           <SessionList error={error} data={data} />
         </div>
+        <Feedback />
         <Footer />
     </>
     

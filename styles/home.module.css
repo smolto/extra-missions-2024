@@ -42,7 +42,7 @@
 }
 
 .container {
-  padding-bottom: 5rem;
+  position: relative;
 }
 
 @media (min-width: 900px) {
