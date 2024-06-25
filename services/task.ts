@@ -127,7 +127,7 @@ export async function getSubtasks(slug: string) {
           authorization: `Bearer ${process.env.WEB_TOKEN}`,
         },
         next: {
-          revalidate: 0,
+          revalidate: 3600
         },
       }
     );

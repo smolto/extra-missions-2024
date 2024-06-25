@@ -30,7 +30,7 @@ export async function getPost(id: string) {
           authorization: `Bearer ${process.env.WEB_TOKEN}`,
         },
         next: {
-          revalidate: 0,
+          revalidate: 3600,
         },
       }
     );

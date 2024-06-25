@@ -58,7 +58,7 @@
   .feedback--desktop img {
     height: 25px;
     display: block;
-    margin: 0 auto;
+    margin: 0 auto 0.5rem;
     animation: hithere 1s ease-in infinite;
   }
   
@@ -66,7 +66,6 @@
     display: block;
     text-align: center;
     color: #fff;
-    margin-top: 0.5rem;
     text-decoration: underline;
     font-size: 14px;
   }

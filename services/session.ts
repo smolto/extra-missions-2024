@@ -24,7 +24,7 @@ export async function getSessions() {
           authorization: `Bearer ${process.env.WEB_TOKEN}`,
         },
         next: {
-          revalidate: 0,
+          revalidate: 3600,
         },
       }
     );
